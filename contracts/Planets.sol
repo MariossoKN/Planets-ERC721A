@@ -74,8 +74,8 @@ contract Planets is ERC721A, Ownable {
 
     /**
      * @dev Mints given amount of tokens. Requires msg.value to be equal to _amount * i_mintPriceInWei
-     * Emits Mint event
-     * @param _amount number of tokens to mint
+     * Emits Mint event.
+     * @param _amount number of tokens to mint.
      */
     function mint(uint256 _amount) external payable {
         if ((_numberMinted(msg.sender) + _amount) * 1000000000000000000 > i_maxMintAmount) {
